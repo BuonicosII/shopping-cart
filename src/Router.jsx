@@ -1,14 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import NavBar from "./components/navbar/Navbar.jsx";
 
 const Router = () => {
     const router = createBrowserRouter([
       {
         path: "/",
-        element: <>Hello World</>,
+        element: <><NavBar></NavBar>Hello World</>,
       },
       {
         path: "router-test",
-        element: <>Hello Router Test</>,
+        element: <><NavBar></NavBar>Hello Router Test</>,
       },
     ]);
   
