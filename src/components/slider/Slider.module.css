@@ -1,0 +1,15 @@
+.slider {
+    overflow: hidden;
+    height: 60vh;
+    position: relative;
+}
+
+.imageCarousel {
+    display: flex;
+    position: absolute;
+}
+
+.slide {
+    min-width: 100vw;
+    height: auto;
+}

@@ -1,12 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NavBar from "./components/navbar/Navbar.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import Slider from "./components/slider/Slider.jsx";
 
 const Router = () => {
     const router = createBrowserRouter([
       {
         path: "/",
-        element: <><NavBar /><div style={{height: "100vh"}}></div><Footer /></>,
+        element: <><NavBar /><Slider /><Footer /></>,
       },
       {
         path: "router-test",
