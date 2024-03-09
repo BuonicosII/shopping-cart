@@ -1,5 +1,7 @@
 .navbar {
-    width: 100vw;
-    height: 5vh;
+    height: 7vh;
     border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

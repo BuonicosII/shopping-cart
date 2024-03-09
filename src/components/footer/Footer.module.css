@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 30vh;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    padding: 5vh;
+    gap: 5vh;
+
+}
+
+.footerDiv {
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
