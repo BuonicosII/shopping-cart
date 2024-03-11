@@ -2,6 +2,8 @@
     overflow: hidden;
     height: 60vh;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .imageCarousel {
@@ -11,5 +13,37 @@
 
 .slide {
     min-width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
     height: auto;
+}
+
+.centralDiv {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    color: white;
+}
+
+.centralDiv h1 {
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.centralDiv button {
+    width: 15vh;
+    height: 5vh;
+    font-size: 2vh;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 1vh;
 }
