@@ -47,3 +47,7 @@
     border: none;
     border-radius: 1vh;
 }
+
+.centralDiv button:hover {
+    box-shadow: 0 0 3px #ffffff;
+}

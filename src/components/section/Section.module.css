@@ -1,0 +1,20 @@
+.sectionHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+}
+
+section {
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10vh;
+}
+
+section img {
+    max-height: 60%;
+    width: auto;
+}
