@@ -11,8 +11,8 @@ const Router = () => {
         element: <>
           <NavBar />
           <Slider />
-          <Section imageUrl="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_1280.jpg" order="left" heading="Some Heading"/>
-          <Section imageUrl="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_1280.jpg" order="right" heading="Some Heading"/>
+          <Section imageUrl="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_1280.jpg" order="left" heading="Only the best fabrics"/>
+          <Section imageUrl="https://cdn.pixabay.com/photo/2017/06/27/17/32/sew-2448191_1280.jpg" order="right" heading="Hand sewn in Italy"/>
           <Footer />
           </>,
       },

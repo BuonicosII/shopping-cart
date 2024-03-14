@@ -2,19 +2,51 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 5vh;
+    padding: 2vh;
 }
 
-section {
-    height: 50vh;
+.sectionClass {
+    height: 40vh;
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10vh;
 }
 
-section img {
-    max-height: 60%;
+.sectionClass img {
+    max-height: 70%;
     width: auto;
+    border-radius: 3vh;
+}
+
+.sectionClass h2 {
+    font-size: 6vh;
+    font-weight: 700;
+}
+
+.sectionClass p {
+    font-size: 2vh;
+}
+
+.sectionClass button {
+    width: 15vh;
+    height: 5vh;
+    font-size: 2vh;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 1vh;
+}
+
+.sectionClass button:hover {
+    box-shadow: 0 0 3px #ffffff;
+    cursor: pointer
+}
+
+.sectionClass div {
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-around;
 }

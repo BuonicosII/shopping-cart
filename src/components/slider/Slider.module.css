@@ -50,4 +50,5 @@
 
 .centralDiv button:hover {
     box-shadow: 0 0 3px #ffffff;
+    cursor: pointer
 }
