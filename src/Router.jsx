@@ -3,6 +3,10 @@ import NavBar from "./components/navbar/Navbar.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Slider from "./components/slider/Slider.jsx";
 import Section from "./components/section/Section.jsx";
+import Card from "./components/card/Card.jsx";
+
+//const test = await fetch('https://fakestoreapi.com/products/1')
+//const sampleProduct = await test.json()
 
 const Router = () => {
     const router = createBrowserRouter([
