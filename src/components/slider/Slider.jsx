@@ -2,6 +2,9 @@ import styles from './Slider.module.css'
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import womenswear from '../../assets/womenswear.jpg'
+import menswear from '../../assets/menswear.jpg'
+import accessories from '../../assets/accessories.jpg'
 
 function Slide ({ url, content }) {
     return (
@@ -50,10 +53,10 @@ export default function Slider () {
         return (
             <div className={styles.slider} >
                 <div className={styles.imageCarousel} style={{left: left + 'vw'}}>
-                    <Slide url={"/womenswear.jpg"} content={"For Her"}/>
-                    <Slide url={"/menswear.jpg"} content={"For Him"}/>
-                    <Slide url={"/accessories.jpg"} content={"For Both"}/>
-                    <Slide url={"/womenswear.jpg"} content={"For Her"}/>
+                    <Slide url={womenswear} content={"For Her"}/>
+                    <Slide url={menswear} content={"For Him"}/>
+                    <Slide url={accessories} content={"For Both"}/>
+                    <Slide url={womenswear} content={"For Her"}/>
                 </div>
             </div>
         )
@@ -61,10 +64,10 @@ export default function Slider () {
         return (
             <div className={styles.slider} >
                 <div className={styles.imageCarousel} style={{left: left + 'vw', transition: "left 1s ease-in-out"}}>
-                    <Slide url={"/womenswear.jpg"} content={"For Her"}/>
-                    <Slide url={"/menswear.jpg"} content={"For Him"}/>
-                    <Slide url={"/accessories.jpg"} content={"For Both"}/>
-                    <Slide url={"/womenswear.jpg"} content={"For Her"}/>
+                    <Slide url={womenswear} content={"For Her"}/>
+                    <Slide url={menswear} content={"For Him"}/>
+                    <Slide url={accessories} content={"For Both"}/>
+                    <Slide url={womenswear} content={"For Her"}/>
                 </div>
             </div>
         )

@@ -5,8 +5,12 @@ import Slider from "./components/slider/Slider.jsx";
 import Section from "./components/section/Section.jsx";
 import Card from "./components/card/Card.jsx";
 
+import jeans from './assets/fabric.jpg'
+import sewing from './assets/sewing.jpg'
+
 const test = await fetch('https://fakestoreapi.com/products/1')
 const sampleProduct = await test.json()
+console.log(sampleProduct)
 
 const Router = () => {
     const router = createBrowserRouter([
@@ -15,8 +19,8 @@ const Router = () => {
         element: <>
           <NavBar />
           <Slider />
-          <Section imageUrl="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_1280.jpg" order="left" heading="Only the best fabrics"/>
-          <Section imageUrl="https://cdn.pixabay.com/photo/2017/06/27/17/32/sew-2448191_1280.jpg" order="right" heading="Hand sewn in Italy"/>
+          <Section imageUrl={jeans} order="left" heading="Only the best fabrics"/>
+          <Section imageUrl={sewing} order="right" heading="Hand sewn in Italy"/>
           <Card someObj={sampleProduct} />
           <Footer />
           </>,

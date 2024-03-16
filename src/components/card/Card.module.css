@@ -21,7 +21,7 @@
 }
 
 .price {
-    font-size: 1.3vh;
+    font-size: 1.5vh;
     font-weight: bold;
 }
 
@@ -38,4 +38,21 @@
 .card button:hover {
     box-shadow: 0 0 3px #ffffff;
     cursor: pointer
+}
+
+.reviewDiv {
+    max-width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.reviewDiv img {
+    max-height: 24px;
+}
+
+.reviewInfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
