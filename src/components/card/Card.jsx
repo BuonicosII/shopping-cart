@@ -1,4 +1,5 @@
 import styles from './Card.module.css'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import emptystar from '../../assets/emptystar.png'
 import halfstar from '../../assets/halfstar.png'
@@ -114,6 +115,8 @@ function Reviews ({ rating }) {
 
 export default function Card ({ someObj }) {
 
+    const [quantity, setQuantity] = useState(1)
+
     return (
         <div className={styles.card}>
             <span className={styles.cardCategory}>{someObj.category.slice(0, 1).toUpperCase() + someObj.category.slice(1)}</span>
@@ -121,6 +124,17 @@ export default function Card ({ someObj }) {
             <h3 className={styles.cardTitle}>{someObj.title}</h3>
             <Reviews rating={someObj.rating}></Reviews>
             <span className={styles.price}>{someObj.price + " €"}</span>
+            <div className={styles.quantity}>
+                <span>Quantity: {quantity}</span>
+                <div className={styles.quantityButtonHolder}>
+                    <div className={styles.quantityButton} onClick={() => { setQuantity(quantity + 1)}}>
+                        <span>△</span>
+                    </div>
+                    <div className={styles.quantityButton} onClick={() => { if(quantity > 1) {setQuantity(quantity - 1)}}}>
+                        <span>▽</span>
+                    </div>
+                </div>
+            </div>
             <button>Add to Cart</button>
         </div>
     )

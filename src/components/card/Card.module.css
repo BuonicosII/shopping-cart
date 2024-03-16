@@ -56,3 +56,32 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.quantity {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 3vh;
+    width: 50%;
+}
+
+.quantityButtonHolder {
+    display: flex;
+    flex-direction: column;
+    width: 2vh;
+    gap: 1px;
+}
+
+.quantityButton {
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 0.5vh;
+}
+
+.quantityButton:hover {
+    cursor: pointer;
+}
