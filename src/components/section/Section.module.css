@@ -50,3 +50,8 @@
     flex-direction: column;
     justify-content: space-around;
 }
+
+.sectionClass button a {
+    color: inherit;
+    text-decoration: inherit;
+}

@@ -52,3 +52,8 @@
     box-shadow: 0 0 3px #ffffff;
     cursor: pointer
 }
+
+.centralDiv button a {
+    color: inherit;
+    text-decoration: inherit;
+}

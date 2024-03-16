@@ -1,0 +1,41 @@
+.card {
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.card img {
+    width: 100%;
+}
+
+.cardTitle {
+    text-align: center;
+    font-size: 1.5vh;
+}
+
+.cardCategory {
+    font-size: 1.3vh;
+    color: grey;
+}
+
+.price {
+    font-size: 1.3vh;
+    font-weight: bold;
+}
+
+.card button {
+    width: 15vh;
+    height: 5vh;
+    font-size: 2vh;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 1vh;
+}
+
+.card button:hover {
+    box-shadow: 0 0 3px #ffffff;
+    cursor: pointer
+}

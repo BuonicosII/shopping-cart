@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import styles from './Section.module.css'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 export default function Section ({ imageUrl, order, heading}) {
     if (order === "left") {
@@ -11,7 +11,7 @@ export default function Section ({ imageUrl, order, heading}) {
                     <div>
                         <h2>{heading}</h2>
                         <p>Lorem ipsum dolor sit amet</p>
-                        <button>Find out more</button>
+                        <button><Link to="/">Find out more</Link></button>
                     </div>
                 </section>
             </div>
@@ -23,7 +23,7 @@ export default function Section ({ imageUrl, order, heading}) {
                     <div>
                         <h2>{heading}</h2>
                         <p>Lorem ipsum dolor sit amet</p>
-                        <button>Find out more</button>
+                        <button><Link to="/">Find out more</Link></button>
                     </div>
                     <img src={imageUrl} alt="" />
                 </section>

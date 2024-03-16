@@ -1,13 +1,14 @@
 import styles from './Slider.module.css'
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 function Slide ({ url, content }) {
     return (
         <div className={styles.slide}>
             <div className={styles.centralDiv}>
                 <h1>{content}</h1>
-                <button>Shop now</button>
+                <button><Link to="/">Shop now</Link></button>
             </div>
             <img src={url} alt="" />
         </div>
