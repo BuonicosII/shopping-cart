@@ -120,8 +120,12 @@ export default function Card ({ someObj }) {
     return (
         <div className={styles.card}>
             <span className={styles.cardCategory}>{someObj.category.slice(0, 1).toUpperCase() + someObj.category.slice(1)}</span>
-            <img src={someObj.image} alt="" />
-            <h3 className={styles.cardTitle}>{someObj.title}</h3>
+            <div className={styles.imgHolder}>
+                <img src={someObj.image} alt="" />
+            </div>
+            <div className={styles.cardTitleHolder}>
+                <h3 className={styles.cardTitle}>{someObj.title}</h3>
+            </div>
             <Reviews rating={someObj.rating}></Reviews>
             <span className={styles.price}>{someObj.price + " €"}</span>
             <div className={styles.quantity}>

@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer.jsx";
 import Slider from "./components/slider/Slider.jsx";
 import Section from "./components/section/Section.jsx";
 import Featured from "./components/featured/Featured.jsx";
+import Category from "./components/category/Category.jsx";
 
 import jeans from './assets/fabric.jpg'
 import sewing from './assets/sewing.jpg'
@@ -26,8 +27,8 @@ const Router = () => {
           </>,
       },
       {
-        path: "router-test",
-        element: <><NavBar />Hello Router Test<Footer /></>,
+        path: "/:name",
+        element: <><NavBar /><Category products={sampleProducts}/><Footer /></>,
       },
     ]);
   

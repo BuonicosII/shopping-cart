@@ -1,0 +1,17 @@
+.category {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+
+.productList {
+    max-width: 50%;
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10vh;
+    padding: 10vh;
+}
