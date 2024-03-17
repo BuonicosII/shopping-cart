@@ -9,7 +9,7 @@ function Reviews ({ rating }) {
 
     let url1, url2, url3, url4, url5
 
-    switch (rating.rate) {
+    switch (true) {
 
         case (rating.rate > 0 && rating.rate < 1):
                 url1 = halfstar
@@ -82,7 +82,7 @@ function Reviews ({ rating }) {
                 url5 = halfstar
             break;
 
-        case (rating.rate = 5):
+        case (rating.rate === 5):
                 url1 = fullstar
                 url2 = fullstar
                 url3 = fullstar
