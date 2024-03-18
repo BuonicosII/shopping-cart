@@ -6,20 +6,21 @@ import womenswear from '../../assets/womenswear.jpg'
 import menswear from '../../assets/menswear.jpg'
 import accessories from '../../assets/accessories.jpg'
 
-function Slide ({ url, content }) {
+function Slide ({ imgUrl, content, pageUrl }) {
     return (
         <div className={styles.slide}>
             <div className={styles.centralDiv}>
                 <h1>{content}</h1>
-                <button><Link to="/">Shop now</Link></button>
+                <button><Link to={pageUrl}>Shop now</Link></button>
             </div>
-            <img src={url} alt="" />
+            <img src={imgUrl} alt="" />
         </div>
     )
 }
 
 Slide.propTypes = {
-    url: PropTypes.string,
+    imgUrl: PropTypes.string,
+    pageUrl: PropTypes.string, 
     content: PropTypes.string,
 }
 
@@ -53,10 +54,10 @@ export default function Slider () {
         return (
             <div className={styles.slider} >
                 <div className={styles.imageCarousel} style={{left: left + 'vw'}}>
-                    <Slide url={womenswear} content={"For Her"}/>
-                    <Slide url={menswear} content={"For Him"}/>
-                    <Slide url={accessories} content={"For Both"}/>
-                    <Slide url={womenswear} content={"For Her"}/>
+                    <Slide imgUrl={womenswear} content={"For Her"} pageUrl="/womenswear"/>
+                    <Slide imgUrl={menswear} content={"For Him"} pageUrl="/menswear"/>
+                    <Slide imgUrl={accessories} content={"For Both"} pageUrl="/jewelery"/>
+                    <Slide imgUrl={womenswear} content={"For Her"} pageUrl="/womenswear"/>
                 </div>
             </div>
         )
@@ -64,10 +65,10 @@ export default function Slider () {
         return (
             <div className={styles.slider} >
                 <div className={styles.imageCarousel} style={{left: left + 'vw', transition: "left 1s ease-in-out"}}>
-                    <Slide url={womenswear} content={"For Her"}/>
-                    <Slide url={menswear} content={"For Him"}/>
-                    <Slide url={accessories} content={"For Both"}/>
-                    <Slide url={womenswear} content={"For Her"}/>
+                    <Slide imgUrl={womenswear} content={"For Her"} pageUrl="/womenswear"/>
+                    <Slide imgUrl={menswear} content={"For Him"} pageUrl="/menswear"/>
+                    <Slide imgUrl={accessories} content={"For Both"} pageUrl="/jewelery"/>
+                    <Slide imgUrl={womenswear} content={"For Her"} pageUrl="/womenswear"/>
                 </div>
             </div>
         )

@@ -1,7 +1,56 @@
 .navbar {
-    height: 7vh;
+    height: 10vh;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.navbar nav {
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar nav a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.5vh;
+}
+
+.linkHolder {
+    position: relative;
+}
+
+.linkHolder::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    background-color: white;
+    transition: width 200ms ;
+}
+
+.linkHolder:hover::after {
+    width: 100%;
+}
+
+
+.highlight {
+    position: relative;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    background-color: white;
 }
