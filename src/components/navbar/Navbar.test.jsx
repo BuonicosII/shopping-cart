@@ -12,6 +12,6 @@ describe('Navbar component', () => {
     
     it('renders shop link', () => {
         render(<BrowserRouter><NavBar /></BrowserRouter>);
-        expect(screen.getAllByRole('link')[1].textContent).toBe('Shop');
+        expect(screen.getAllByRole('link')[1].textContent).toBe('Menswear');
     })
 })

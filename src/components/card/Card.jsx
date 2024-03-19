@@ -113,7 +113,7 @@ function Reviews ({ rating }) {
     )
 }
 
-export default function Card ({ someObj }) {
+export default function Card ({ someObj, callback }) {
 
     const [quantity, setQuantity] = useState(1)
 
@@ -139,14 +139,15 @@ export default function Card ({ someObj }) {
                     </div>
                 </div>
             </div>
-            <button>Add to Cart</button>
+            <button onClick={callback}>Add to Cart</button>
         </div>
     )
 }
 
 
 Card.propTypes = {
-    someObj: PropTypes.object
+    someObj: PropTypes.object,
+    callback: PropTypes.func
 }
 
 Reviews.propTypes = {
