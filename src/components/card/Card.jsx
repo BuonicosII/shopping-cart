@@ -131,15 +131,15 @@ export default function Card ({ someObj, callback }) {
             <div className={styles.quantity}>
                 <span>Quantity: {quantity}</span>
                 <div className={styles.quantityButtonHolder}>
-                    <div className={styles.quantityButton} onClick={() => { setQuantity(quantity + 1)}}>
-                        <span>△</span>
-                    </div>
-                    <div className={styles.quantityButton} onClick={() => { if(quantity > 1) {setQuantity(quantity - 1)}}}>
-                        <span>▽</span>
-                    </div>
+                    <button className={styles.quantityButton} onClick={() => { setQuantity(quantity + 1)}}>
+                        △
+                    </button>
+                    <button className={styles.quantityButton} onClick={() => { if(quantity > 1) {setQuantity(quantity - 1)}}}>
+                        ▽
+                    </button>
                 </div>
             </div>
-            <button onClick={callback}>Add to Cart</button>
+            <button className={styles.cardButton}onClick={callback}>Add to Cart</button>
         </div>
     )
 }
