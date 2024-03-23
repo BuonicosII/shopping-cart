@@ -2,7 +2,7 @@
     height: 10vh;
     border-bottom: 1px solid black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: black;
     color: white;
@@ -53,4 +53,25 @@
     bottom: -7px;
     width: 100%;
     background-color: white;
+}
+
+.cartIcon {
+    position: relative;
+}
+
+.itemsInCart {
+    text-decoration: none;
+    position: absolute;
+    background-color: red;
+    color: white;
+    top: 0;
+    right: 0;
+    width: 1.3vh;
+    height: 1.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: calc(1.3vh /2);
+    font-size: 1vh;
+    font-weight: 700;
 }
