@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { useState } from "react";
 import styles from "./Featured.module.css"
 
-function randomNumbers () {
+function randomNumbers (length) {
     const numbers = []
   
     for (let i = 0; i < 3; i++) {
-      let num = Math.floor(Math.random() * 20);
+      let num = Math.floor(Math.random() * length);
   
       while (numbers.includes(num)) {
-        num = Math.floor(Math.random() * 20);
+        num = Math.floor(Math.random() * length);
       }
   
       numbers.push(num)
@@ -21,7 +21,7 @@ function randomNumbers () {
   }
 
 export default function Featured ({ products }) {
-    const [featured] = useState(randomNumbers())
+    const [featured] = useState(randomNumbers(products.length))
     return (
         <div className={styles.featuredHolder}>
             <h2>Most bought</h2>
