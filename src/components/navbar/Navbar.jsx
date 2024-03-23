@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import styles from './Navbar.module.css'
 
-export default function NavBar () {
+export default function NavBar ( { cart } ) {
 
     const { name } = useParams()
 
@@ -14,6 +14,7 @@ export default function NavBar () {
                 {name === "jewelery" ? <div className={styles.highlight}><Link to="/jewelery">Jewelery</Link></div> : <div className={styles.linkHolder}><Link to="/jewelery">Jewelery</Link></div>}
                 {name === "electronics" ? <div className={styles.highlight}><Link to="/electronics">Electronics</Link></div> : <div className={styles.linkHolder}><Link to="/electronics">Electronics</Link></div>}
             </nav>
+            <div> { cart.length }</div>
         </header>
     )
 }

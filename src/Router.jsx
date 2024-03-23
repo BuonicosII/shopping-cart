@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useState } from "react";
 import NavBar from "./components/navbar/Navbar.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Slider from "./components/slider/Slider.jsx";
@@ -14,21 +15,34 @@ const sampleProducts = await test.json()
 console.log(sampleProducts)
 
 const Router = () => {
+
+    const [cart, setCart ] = useState([]);
+
+    function addToCart(product, quantity) {
+      const newArray = cart.map( product => product)
+
+      for (let i = 0; i < quantity; i++) {
+        newArray.push(product)
+      }
+
+      setCart(newArray)
+    }
+
     const router = createBrowserRouter([
       {
         path: "/",
         element: <>
-          <NavBar />
+          <NavBar cart={cart}/>
           <Slider />
           <Section imageUrl={jeans} order="left" heading="Only the best fabrics"/>
           <Section imageUrl={sewing} order="right" heading="Hand sewn in Italy"/>
-          <Featured products={sampleProducts}/>
-          <Footer />
+          <Featured products={sampleProducts} fn={addToCart}/>
+          <Footer fn={setCart}/>
           </>,
       },
       {
         path: "/:name",
-        element: <><NavBar /><Category products={sampleProducts}/><Footer /></>,
+        element: <><NavBar cart={cart}/><Category products={sampleProducts}/><Footer fn={setCart}/></>,
       },
     ]);
   
