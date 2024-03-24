@@ -7,6 +7,16 @@ export default function NavBar ( { cart } ) {
 
     const { name } = useParams()
 
+    const itemsInCart = () => {
+        let totalQuantity = 0
+
+        for (const product of cart) {
+            totalQuantity += product.quantity
+        }
+
+        return totalQuantity
+    }
+
     return (
         <header className={styles.navbar}>
             <div>Logo</div>
@@ -20,12 +30,11 @@ export default function NavBar ( { cart } ) {
             <Link to="cart">
                 <div className={styles.cartIcon}>
                     <img src={cartImg} alt="" />
-                    { cart.length > 0 &&
+                    { itemsInCart() > 0 &&
                         <div className={styles.itemsInCart}>
-                            <span>{cart.length}</span>
+                            <span>{itemsInCart()}</span>
                         </div>
                     }
-
                 </div>
             </Link>
         </header>

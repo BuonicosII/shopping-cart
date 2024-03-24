@@ -6,7 +6,7 @@ import Slider from "./components/slider/Slider.jsx";
 import Section from "./components/section/Section.jsx";
 import Featured from "./components/featured/Featured.jsx";
 import Category from "./components/category/Category.jsx";
-
+import Cart from "./components/cart/Cart.jsx";
 import jeans from './assets/fabric.jpg'
 import sewing from './assets/sewing.jpg'
 
@@ -19,12 +19,8 @@ const Router = () => {
     const [cart, setCart ] = useState([]);
 
     function addToCart(product, quantity) {
-      const newArray = cart.map( product => product)
-
-      for (let i = 0; i < quantity; i++) {
-        newArray.push(product)
-      }
-
+      const newArray = cart.map( item => item)
+      newArray.push({product: product, quantity: quantity})
       setCart(newArray)
     }
 
@@ -42,8 +38,13 @@ const Router = () => {
       },
       {
         path: "/:name",
-        element: <><NavBar cart={cart}/><Category products={sampleProducts}/><Footer fn={setCart}/></>,
+        element: <><NavBar cart={cart}/><Category products={sampleProducts}/><Footer/></>,
       },
+      {
+        path: "/cart",
+        element: <><NavBar cart={cart}/><Cart cart={cart}/></>
+      }
+
     ]);
   
     return <RouterProvider router={router} />;
