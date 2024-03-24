@@ -1,4 +1,4 @@
-export const mockProductArray = [
+const mockProductArray = [
     {
         "id": 1,
         "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -48,3 +48,20 @@ export const mockProductArray = [
         }
     }
 ]
+
+const mockCart = mockProductArray.map( (product, index) => {
+    //I'm actually too lazy to write a mock array by Hand
+    if (index === 2) {
+        return {
+            product: product,
+            quantity: 3
+        }
+    } else {
+        return {
+            product: product,
+            quantity: 1
+        }
+    }
+})
+
+export { mockProductArray, mockCart}

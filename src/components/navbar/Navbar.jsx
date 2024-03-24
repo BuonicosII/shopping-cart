@@ -1,11 +1,11 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from './Navbar.module.css'
 import cartImg from '../../assets/shoppingcart.png'
 import PropTypes from 'prop-types'
 
 export default function NavBar ( { cart } ) {
 
-    const { name } = useParams()
+    const { pathname } = useLocation()
 
     const itemsInCart = () => {
         let totalQuantity = 0
@@ -21,13 +21,13 @@ export default function NavBar ( { cart } ) {
         <header className={styles.navbar}>
             <div>Logo</div>
             <nav>
-                {name === undefined ? <div className={styles.highlight}><Link to="/">Home</Link></div> : <div className={styles.linkHolder}><Link to="/">Home</Link></div>}
-                {name === "menswear" ? <div className={styles.highlight}><Link to="/menswear">Menswear</Link></div> : <div className={styles.linkHolder}><Link to="/menswear">Menswear</Link></div>}
-                {name === "womenswear" ? <div className={styles.highlight}><Link to="/womenswear">Womenswear</Link></div> : <div className={styles.linkHolder}><Link to="/womenswear">Womenswear</Link></div>}
-                {name === "jewelery" ? <div className={styles.highlight}><Link to="/jewelery">Jewelery</Link></div> : <div className={styles.linkHolder}><Link to="/jewelery">Jewelery</Link></div>}
-                {name === "electronics" ? <div className={styles.highlight}><Link to="/electronics">Electronics</Link></div> : <div className={styles.linkHolder}><Link to="/electronics">Electronics</Link></div>}
+                {pathname === "/" ? <div className={styles.highlight}><Link to="/">Home</Link></div> : <div className={styles.linkHolder}><Link to="/">Home</Link></div>}
+                {pathname === "/menswear" ? <div className={styles.highlight}><Link to="/menswear">Menswear</Link></div> : <div className={styles.linkHolder}><Link to="/menswear">Menswear</Link></div>}
+                {pathname === "/womenswear" ? <div className={styles.highlight}><Link to="/womenswear">Womenswear</Link></div> : <div className={styles.linkHolder}><Link to="/womenswear">Womenswear</Link></div>}
+                {pathname === "/jewelery" ? <div className={styles.highlight}><Link to="/jewelery">Jewelery</Link></div> : <div className={styles.linkHolder}><Link to="/jewelery">Jewelery</Link></div>}
+                {pathname === "/electronics" ? <div className={styles.highlight}><Link to="/electronics">Electronics</Link></div> : <div className={styles.linkHolder}><Link to="/electronics">Electronics</Link></div>}
             </nav>
-            <Link to="cart">
+            <Link to="/cart">
                 <div className={styles.cartIcon}>
                     <img src={cartImg} alt="" />
                     { itemsInCart() > 0 &&
