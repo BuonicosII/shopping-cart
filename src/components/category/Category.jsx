@@ -43,5 +43,5 @@ export default function Category ({ products, callback }) {
 
 Category.propTypes = {
     products: PropTypes.array,
-    callback: PropTypes.function
+    callback: PropTypes.func
 }

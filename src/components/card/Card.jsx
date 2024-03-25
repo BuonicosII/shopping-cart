@@ -139,7 +139,7 @@ export default function Card ({ someObj, callback }) {
                     </button>
                 </div>
             </div>
-            <button className={styles.cardButton}onClick={() => { callback(someObj, quantity)}}>Add to Cart</button>
+            <button className={styles.cardButton}onClick={() => { callback(someObj, quantity); setQuantity(1)} }>Add to Cart</button>
         </div>
     )
 }

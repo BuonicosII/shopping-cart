@@ -20,7 +20,7 @@ function randomNumbers (length) {
   
   }
 
-export default function Featured ({ products, fn }) {
+export default function Featured ({ products, callback }) {
     const [featured] = useState(randomNumbers(products.length))
     return (
         <div className={styles.featuredHolder}>
@@ -28,7 +28,7 @@ export default function Featured ({ products, fn }) {
             <section className={styles.sectionClass}>
                 { products.filter( (product, i) => (featured.includes(i))).map( (product) => {
                     return (
-                        <Card key={product.id} someObj={product} callback={fn}></Card>
+                        <Card key={product.id} someObj={product} callback={callback}></Card>
                     )
                 })
                 }
@@ -38,5 +38,6 @@ export default function Featured ({ products, fn }) {
 }
 
 Featured.propTypes = {
-    products: PropTypes.array
+    products: PropTypes.array,
+    callback: PropTypes.func
 }

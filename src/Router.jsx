@@ -20,9 +20,35 @@ const Router = () => {
 
     function addToCart(product, quantity) {
       const newArray = cart.map( item => item)
-      newArray.push({product: product, quantity: quantity})
-      setCart(newArray)
+
+      //check if the item is already in the cart
+      let itemIndex = newArray.findIndex( element => element.product.id === product.id)
+
+      if (itemIndex !== -1) {
+        newArray[itemIndex].quantity = newArray[itemIndex].quantity + quantity
+        setCart(newArray)
+      } else {
+        newArray.push({product: product, quantity: quantity})
+        setCart(newArray)
+      }
     }
+
+    function removeFromCart(product, quantity) {
+      const newArray = cart.map(item => item)
+
+      //check if the item is already in the cart
+      let itemIndex = newArray.findIndex( element => element.product.id === product.id)
+
+      if (itemIndex !== -1) {
+        newArray[itemIndex].quantity = newArray[itemIndex].quantity - quantity
+        if (newArray[itemIndex].quantity <= 0) {
+          newArray.splice(newArray[itemIndex], 1)
+          setCart(newArray)
+        } else {
+          setCart(newArray)
+        }
+      }
+    } 
 
     const router = createBrowserRouter([
       {
@@ -32,8 +58,8 @@ const Router = () => {
           <Slider />
           <Section imageUrl={jeans} order="left" heading="Only the best fabrics"/>
           <Section imageUrl={sewing} order="right" heading="Hand sewn in Italy"/>
-          <Featured products={sampleProducts} fn={addToCart}/>
-          <Footer fn={setCart}/>
+          <Featured products={sampleProducts} callback={addToCart}/>
+          <Footer />
           </>,
       },
       {
@@ -42,12 +68,12 @@ const Router = () => {
       },
       {
         path: "/cart",
-        element: <><NavBar cart={cart}/><Cart cart={cart}/></>
+        element: <><NavBar cart={cart}/><Cart cart={cart} fns={[addToCart, removeFromCart]}/></>
       }
 
     ]);
   
     return <RouterProvider router={router} />;
-  };
+  }
   
   export default Router;
