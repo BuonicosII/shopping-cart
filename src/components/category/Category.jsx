@@ -3,7 +3,7 @@ import Card from "../card/Card";
 import PropTypes from 'prop-types'
 import styles from "./Category.module.css"
 
-export default function Category ({ products }) {
+export default function Category ({ products, callback }) {
 
     const { name } = useParams()
 
@@ -33,7 +33,7 @@ export default function Category ({ products }) {
             <div className={styles.productList}>
                 {products.map( (product) => {
                     if (product.category === filter) {
-                        return <Card key={product.id} someObj={product}/>
+                        return <Card key={product.id} someObj={product} callback={callback}/>
                     }
                 })}
             </div>
@@ -42,5 +42,6 @@ export default function Category ({ products }) {
 }
 
 Category.propTypes = {
-    products: PropTypes.array
+    products: PropTypes.array,
+    callback: PropTypes.function
 }

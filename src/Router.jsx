@@ -38,7 +38,7 @@ const Router = () => {
       },
       {
         path: "/:name",
-        element: <><NavBar cart={cart}/><Category products={sampleProducts}/><Footer/></>,
+        element: <><NavBar cart={cart}/><Category products={sampleProducts} callback={addToCart}/><Footer/></>,
       },
       {
         path: "/cart",
