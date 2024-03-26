@@ -18,6 +18,7 @@ function ProductSummary ( { item, fns}) {
                     ▽
                 </button>
             </div>
+            <button onClick={() => { fns[2](item.product)}}>Remove all</button>
         </div>
     )
 }

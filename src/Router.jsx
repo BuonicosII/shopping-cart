@@ -50,6 +50,12 @@ const Router = () => {
       }
     } 
 
+    function removeAllInstances(product) {
+      const newArray = cart.filter(item => item.product.id !== product.id)
+
+      setCart(newArray)
+    }
+
     const router = createBrowserRouter([
       {
         path: "/",
@@ -68,7 +74,7 @@ const Router = () => {
       },
       {
         path: "/cart",
-        element: <><NavBar cart={cart}/><Cart cart={cart} fns={[addToCart, removeFromCart]}/></>
+        element: <><NavBar cart={cart}/><Cart cart={cart} fns={[addToCart, removeFromCart, removeAllInstances]}/></>
       }
 
     ]);
