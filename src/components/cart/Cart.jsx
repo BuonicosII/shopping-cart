@@ -18,7 +18,7 @@ function ProductSummary ( { item, fns}) {
                     ▽
                 </button>
             </div>
-            <button onClick={() => { fns[2](item.product)}}>Remove all</button>
+            <button onClick={() => { fns[2](item.product)}} className={styles.removeButton}>✕</button>
         </div>
     )
 }
@@ -31,8 +31,11 @@ export default function Cart ({ cart, fns }) {
             <div className={styles.cartInfo}>
                 <h1>Your Cart</h1>
                 <hr />
-                { cart.length === 0 ? <h2>Your cart is empty!</h2> : cart.map( item => {
-                        return <><ProductSummary key={item.product.id} item={item} fns={fns} /><hr /></>
+                { cart.length === 0 ? <h2>Your cart is empty!</h2> : cart.map( (item, index) => {
+                        return <>
+                        { index !== 0 && <hr />}
+                        <ProductSummary key={item.product.id} item={item} fns={fns} />
+                        </>
                 })}
             </div>
         </div>

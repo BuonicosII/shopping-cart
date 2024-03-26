@@ -33,7 +33,7 @@
     width: 100%;
     max-height: 20vh;
     gap: 2.5vh;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .productRecap img {
@@ -42,6 +42,7 @@
 
 .productRecap h3 {
     max-width: 30%;
+    width: 30%;
 }
 
 .quantityButtonHolder {
@@ -63,5 +64,15 @@
 }
 
 .quantityButton:hover {
+    cursor: pointer;
+}
+
+.removeButton {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 2vh;
+}
+
+.removeButton:hover {
     cursor: pointer;
 }
