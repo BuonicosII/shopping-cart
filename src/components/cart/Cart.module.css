@@ -28,21 +28,26 @@
 }
 
 .productRecap {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 0.5fr;
     width: 100%;
     max-height: 20vh;
     gap: 2.5vh;
-    justify-content: space-around;
+}
+
+.flexDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh
+}
+
+.productLabel {
+    grid-area: 1 / 1 / 2 / 3;
 }
 
 .productRecap img {
     max-width: 10vh;
-}
-
-.productRecap h3 {
-    max-width: 30%;
-    width: 30%;
 }
 
 .quantityButtonHolder {
