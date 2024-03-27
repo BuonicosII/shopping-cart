@@ -39,14 +39,15 @@ const Router = () => {
       //check if the item is already in the cart
       let itemIndex = newArray.findIndex( element => element.product.id === product.id)
 
-      if (itemIndex !== -1) {
-        newArray[itemIndex].quantity = newArray[itemIndex].quantity - quantity
-        if (newArray[itemIndex].quantity <= 0) {
+      let newQuantity = newArray[itemIndex].quantity - quantity
+
+        
+      if (newQuantity <= 0) {
           newArray.splice(newArray[itemIndex], 1)
           setCart(newArray)
-        } else {
+      } else {
+          newArray[itemIndex].quantity = newQuantity
           setCart(newArray)
-        }
       }
     } 
 
