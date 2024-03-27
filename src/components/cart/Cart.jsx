@@ -60,6 +60,16 @@ export default function Cart ({ cart, fns }) {
                         </>
                 })}
             </div>
+            <div className={styles.cartCheckout}>
+                <h2>Cart total</h2>
+                <hr />
+                <div>Subtotal</div>
+                <hr />
+                <div>Shipping</div>
+                <hr />
+                <div>Total</div>
+                <button>Checkout</button>
+            </div>
         </div>
     )
 }

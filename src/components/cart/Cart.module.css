@@ -2,8 +2,8 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 5vh;
+    gap: 5vh
 }
 
 .cartInfo {
@@ -80,4 +80,19 @@
 
 .removeButton:hover {
     cursor: pointer;
+}
+
+.cartCheckout {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 15%;
+    gap: 2.5vh;
+    background-color: lightgray;
+    padding: 3vh;
+}
+
+.cartCheckout hr {
+    width: 100%;
+    
 }
